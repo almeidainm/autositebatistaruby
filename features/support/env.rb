@@ -1,3 +1,4 @@
+# Chamando as gems necessárias
 require 'capybara'
 require 'selenium-webdriver'
 require 'cucumber'
@@ -8,5 +9,3 @@ Capybara.configure do |config|
     config.default_driver = :selenium_chrome
     config.default_max_wait_time = 30
 end
-
-

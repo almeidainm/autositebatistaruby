@@ -1,8 +1,9 @@
 class AcessandoTreinamento < SitePrism::Page
   set_url '/treinamento/home/'
-  element :paginatreinamento, 'h5.orange-text'
-  def paginatreinamento
-    paginatreinamento.has_
+  element :search_field, 'h5.orange-text'
+  element :btn_form, :xpath, '//a[contains(text(),"Formulário")]'
+  def btn_form
+    btn_form.click
   end
 end
 

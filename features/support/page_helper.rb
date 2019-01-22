@@ -1,7 +1,9 @@
-Dir[File.joins(File.dirname(__File__), '../pages/*_page.rb')].each { |file| require file}
+Dir[File.join(File.dirname(__FILE__), '../pages/*_page.rb')].each { |file| require file}
 
 module PageObjects
 
-            
+  def principal
+    @princpag ||= AcessandoPrincipal.new
+  end
 
 end

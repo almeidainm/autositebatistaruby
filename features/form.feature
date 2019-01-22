@@ -14,7 +14,7 @@ Funcionalidade: Automatizar Site batista
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
         E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
-        E clicar no botão "CRIAR"
+        E clicar no botão criar
         Então é exibida a tela de usuario criado com sucesso com os dados corretos
 
 
@@ -35,7 +35,7 @@ Funcionalidade: Automatizar Site batista
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
         E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
-        E clicar no botão "CRIAR"
+        E clicar no botão criar
         Então ele exibira a seguinte mensagem de erro "<mensagem>"
 
         Exemplos: Valores
@@ -47,12 +47,12 @@ Funcionalidade: Automatizar Site batista
         |Adriano    |Lima           |adriano@gmail      |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.invalid  | 
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |                  |
 
-    Esquema do Cenario: Caminho Feliz
+    Esquema do Cenario: Caminho do Botão Voltar
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
         E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
-        E clicar no botão "VOLTAR"
-        Então é exibida a tela de usuario criado com sucesso com os dados corretos
+        E clicar no botão voltar
+        Então é exibida a tela home
         
 
         Exemplos: Valores

@@ -2,10 +2,8 @@
 #---------------------------------------------------------------------------------
 #PAGINA 1
 Dado("que o usuario acesse a pagina da automação com batista") do
-    @clicando_b1 =  AcessandoPrincipal.new
-
-    @clicando_b1.clicarbtn1
-    @clicando_b1.load
+ principal.load 
+ principal.clicarbtn1
   end
   
   Quando("clicar em começar automação web") do

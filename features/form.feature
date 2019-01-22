@@ -14,7 +14,7 @@ Funcionalidade: Automatizar Site batista
     Esquema do Cenario: Caminho Feliz
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
-        E o usuario preenche o formulario com os dados <nome>, <sobrenome>, <email>, <endereco>, <universidade>, <profissao>, <genero> e <idade>
+        E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
         E clicar no botão "CRIAR"
         Então é exibida a tela de usuario criado com sucesso com os dados corretos
 
@@ -35,9 +35,9 @@ Funcionalidade: Automatizar Site batista
     Esquema do Cenario: Caminhos alternativos
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
-        E o usuario preenche o formulario com os dados <nome>, <sobrenome>, <email>, <endereco>, <universidade>, <profissao>, <genero> e <idade>
+        E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
         E clicar no botão "CRIAR"
-        Então ele exibira a seguinte mensagem de erro <mensagem>
+        Então ele exibira a seguinte mensagem de erro "<mensagem>"
 
         Exemplos: Valores
 
@@ -51,7 +51,7 @@ Funcionalidade: Automatizar Site batista
     Esquema do Cenario: Caminho Feliz
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
-        E o usuario preenche o formulario com os dados <nome>, <sobrenome>, <email>, <endereco>, <universidade>, <profissao>, <genero> e <idade>
+        E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
         E clicar no botão "VOLTAR"
         Então é exibida a tela de usuario criado com sucesso com os dados corretos
         

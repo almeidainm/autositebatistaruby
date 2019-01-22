@@ -2,16 +2,27 @@
 #---------------------------------------------------------------------------------
 #PAGINA 1
 Dado("que o usuario acesse a pagina da automação com batista") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @clicando_b1 =  AcessandoPrincipal.new
+
+    @clicando_b1.clicarbtn1
+    @clicando_b1.load
   end
   
   Quando("clicar em começar automação web") do
-    pending # Write code here that turns the phrase above into concrete actions
+    
+
+    sleep(3)
   end
 #---------------------------------------------------------------------------------
   #PAGINA 2
   Então("vai para pagina home") do
-    pending # Write code here that turns the phrase above into concrete actions
+
+    @acessandohome = AcessandoTreinamento.new
+
+    @acessandohome.load
+
+    @acessandohome.paginatreinamento 
+    sleep(3)
   end
   
   Quando("o usuario clicar no botão Formulário") do

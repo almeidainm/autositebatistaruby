@@ -5,8 +5,7 @@ Funcionalidade: Automatizar Site batista
     Entrar na tela principal
     Automatizar os formularios de cadastro
 
-
-    Contexto: Acessar tela principal
+        Contexto: Acessar tela principal
         Dado que o usuario acesse a pagina da automação com batista
         Quando clicar em começar automação web
         Então vai para pagina home

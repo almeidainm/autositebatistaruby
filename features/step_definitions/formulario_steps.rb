@@ -14,12 +14,12 @@ Então("vai para pagina home") do
 end
 
 Quando("o usuario clicar no botão Formulário") do
-  home.botao_form
+  home.link_form
   sleep(3)
 end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
-  home.criar_usuario
+  home.link_criar
   sleep(3)
 end
 

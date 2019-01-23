@@ -7,7 +7,7 @@ Funcionalidade: Automatizar Site batista
 
     Contexto: Acessar tela principal
         Dado que o usuario acesse a pagina da automação com batista
-        Quando clicar em começar automação web
+        Quando clicar no botão começar automação web
         Então vai para pagina home
 
     Esquema do Cenario: Caminho Feliz

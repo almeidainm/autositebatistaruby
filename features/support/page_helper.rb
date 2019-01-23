@@ -9,4 +9,8 @@ module PageObjects
   def home
     @treinpag ||= AcessandoTreinamento.new
   end
+
+  def formulario
+    @formpag ||= FormularioPage.new
+  end
 end

@@ -6,4 +6,7 @@ module PageObjects
     @princpag ||= AcessandoPrincipal.new
   end
 
+  def treinamento
+    @treinpag ||= AcessandoTreinamento.new
+  end
 end

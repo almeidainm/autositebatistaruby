@@ -4,6 +4,6 @@ class AcessandoTreinamento < SitePrism::Page
   element :btn_form, :xpath, '//a[contains(text(),"Formulário")]'
   def btn_form
     btn_form.click
-  end
+  end 
 end
 

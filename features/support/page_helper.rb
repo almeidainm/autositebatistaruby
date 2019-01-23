@@ -2,11 +2,11 @@ Dir[File.join(File.dirname(__FILE__), '../pages/*_page.rb')].each { |file| requi
 
 module PageObjects
 
-  def principal
+  def index
     @princpag ||= AcessandoPrincipal.new
   end
 
-  def treinamento
+  def home
     @treinpag ||= AcessandoTreinamento.new
   end
 end

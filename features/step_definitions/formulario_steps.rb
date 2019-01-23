@@ -1,17 +1,18 @@
 Dado("que o usuario acesse a pagina da automação com batista") do
-  principal.load
+  index.load
 end
   
 Quando("clicar em começar automação web") do
-  principal.clicarbtn1
+  index.clicarbtn1
   sleep(3)
 end
 #---------------------------------------------------------------------------------
   #PAGINA 2
 Então("vai para pagina home") do
-  treinamento.search_field
+  home.search_field
   sleep(3)
 end
+
 Quando("o usuario clicar no botão Formulário") do
   pending # Write code here that turns the phrase above into concrete actions
 end

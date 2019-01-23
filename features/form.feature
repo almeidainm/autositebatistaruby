@@ -2,8 +2,7 @@
 
 Funcionalidade: Automatizar Site batista
 
-    Entrar na tela principal
-    Automatizar os formularios de cadastro
+   
 
     Contexto: Acessar tela principal
         Dado que o usuario acesse a pagina da automação com batista

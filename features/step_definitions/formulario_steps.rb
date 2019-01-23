@@ -8,19 +8,19 @@ Quando("clicar no botão começar automação web") do
 end
 
 Então("vai para pagina home") do
-  sleep(3)
-  home.search_field
+ 
+  home.searchField
 end
 
 Quando("o usuario clicar no botão Formulário") do
-  sleep(3)
-  home.link_formulario
+  home.verificaLinkForm
+  home.link_formulario_clk
 
 end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
-  sleep(3)
-  home.link_criaruser
+  home.verificaLinkCriar
+  home.link_criaruser_clk
 end
 
 Quando("o usuario preenche o formulario com os dados {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |nome, sobrenome, email, endereco, universidade, profissao, genero, idade|
@@ -28,7 +28,7 @@ Quando("o usuario preenche o formulario com os dados {string}, {string}, {string
 end
 
 Quando("clicar no botão criar") do
-  sleep(3)
+ 
   formulario.clicarCriar
 end
 

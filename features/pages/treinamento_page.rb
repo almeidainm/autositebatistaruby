@@ -4,13 +4,25 @@ class AcessandoTreinamento < SitePrism::Page
   element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
   element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
 
+  
+  def searchField
+    has_search_field?
 
-  def link_formulario
+  end
+
+  def link_formulario_clk
     link_form.click
   end 
 
-  def link_criaruser
+  def link_criaruser_clk
     link_criar.click
+  end
+
+  def verificaLinkForm
+    has_link_form?
+  end
+  def verificaLinkCriar
+    has_link_criar?
   end
 
 end

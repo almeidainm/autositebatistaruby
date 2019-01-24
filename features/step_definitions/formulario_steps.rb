@@ -25,6 +25,7 @@ end
 
 Quando("o usuario preenche o formulario com os dados {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |nome, sobrenome, email, endereco, universidade, profissao, genero, idade|
   formulario.preencherForm(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
+  cadastroSucesso.recebeForm(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
 end
 
 Quando("clicar no botão criar") do 
@@ -34,6 +35,7 @@ end
 Então("é exibida a tela de usuario criado com sucesso com os dados corretos") do
   
   formulario.verificarSusseso
+  cadastroSucesso.compararForm
 end
 
 Então("ele exibira a seguinte mensagem de erro {string}") do |mensagem|

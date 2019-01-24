@@ -13,4 +13,8 @@ module PageObjects
   def formulario
     @formpag ||= FormularioPage.new
   end
+
+  def cadastroSucesso
+    @cadastropag ||= CadastroSucessoPage.new
+  end
 end

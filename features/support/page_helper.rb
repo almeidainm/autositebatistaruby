@@ -13,4 +13,7 @@ module PageObjects
   def formulario
     @formpag ||= FormularioPage.new
   end
+  def listar
+    @list ||= ListarCad.new
+  end
 end

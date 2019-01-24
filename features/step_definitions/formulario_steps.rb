@@ -55,6 +55,13 @@ Quando("clicar no botão voltar") do
 end
 
 Então("é exibida a tela home") do
+  
   home.searchField
+  home.verificaLinkForm
+  home.link_formulario_clk
+  home.verificaLinkList
+  home.link_listar_clk
+  listar.btDeleteAll_clk
+ 
 end
 

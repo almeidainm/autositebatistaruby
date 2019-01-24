@@ -27,17 +27,27 @@ Quando("o usuario preenche o formulario com os dados {string}, {string}, {string
   formulario.preencherForm(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
 end
 
-Quando("clicar no botão criar") do
- 
+Quando("clicar no botão criar") do 
   formulario.clicarCriar
 end
 
 Então("é exibida a tela de usuario criado com sucesso com os dados corretos") do
-  formulario.verificar
+  
+  formulario.verificarSusseso
 end
 
-Então("ele exibira a seguinte mensagem de erro {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Então("ele exibira a seguinte mensagem de erro {string}") do |mensagem|
+  case mensagem.to_i
+    when 'name.blank' 
+      formulario.verificarErroNome
+    when 'sobrenome.blank'
+      formulario.verificarSusseso
+    when 'email.invalid'
+      formulario.verificarErroEmailInvalid
+    when 'email.blank'
+      formulario.verificarErroEmailBlank
+  end    
+
 end
 
 Quando("clicar no botão voltar") do

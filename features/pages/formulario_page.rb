@@ -1,5 +1,5 @@
 class FormularioPage < SitePrism::Page
-    set_url '/users/new'
+    
 
     element :nome,  '#user_name'
     element :sobrenome, '#user_lastname'
@@ -12,7 +12,11 @@ class FormularioPage < SitePrism::Page
 
     element :btn_criar, :xpath, '//div[@class="actions btn waves-effect green"]'
 
-
+    element :msg_erro_emailBlank, :xpath, '//div[@class="col s9"]//ul//li[1]'
+    element :msg_erro_emailInvalid, :xpath, '//div[@class="col s9"]//ul//li[2]'
+    element :msg_erro_nomeBlank, :xpath, '//li[contains(text(),"Name translation missing: pt-BR.activerecord.error")]'
+    element :msg_erro_sobrenomeBlank, :xpath, '//li[contains(text(),"Name translation missing: pt-BR.activerecord.error")]'
+    
     def preencherForm(nome1, sobrenome1, email1, endereco1, universidade1, profissao1, genero1, idade1)
         nome.set(nome1)
         sobrenome.set(sobrenome1)
@@ -28,8 +32,24 @@ class FormularioPage < SitePrism::Page
         btn_criar.click
     end
 
-    def verificar
+    def verificarSusseso
         find('#notice')
+    end
+
+    def verificarErroEmailBlank
+        find(msg_erro_emailBlank)
+    end
+    
+    def verificarErroEmailInvalid
+        find(msg_erro_emailInvalid)
+    end
+
+    def verificarErroNome
+        find(msg_erro_nomeBlank)
+    end
+
+    def verificarErroSobrenome
+        find(msg_erro_sobrenomeBlank)
     end
     
 end

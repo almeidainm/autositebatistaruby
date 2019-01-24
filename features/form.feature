@@ -41,10 +41,10 @@ Funcionalidade: Automatizar Site batista
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |mensagem          |
         |           |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   name.blank     | 
-        |Adriano    |               |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   blank          | 
+        |Adriano    |               |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         | sobrenome.blank  | 
         |Adriano    |Lima           |                   |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.blank    | 
         |Adriano    |Lima           |adriano@gmail      |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.invalid  | 
-        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |                  |
+        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |        |
 
     Esquema do Cenario: Caminho do Botão Voltar
         Quando o usuario clicar no botão Formulário

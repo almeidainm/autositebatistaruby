@@ -51,10 +51,10 @@ Então("ele exibira a seguinte mensagem de erro {string}") do |mensagem|
 end
 
 Quando("clicar no botão voltar") do
-  pending # Write code here that turns the phrase above into concrete actions
+  formulario.clicarVoltar
 end
 
 Então("é exibida a tela home") do
-  pending # Write code here that turns the phrase above into concrete actions
+  home.searchField
 end
 

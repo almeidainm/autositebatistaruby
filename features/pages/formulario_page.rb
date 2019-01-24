@@ -11,6 +11,7 @@ class FormularioPage < SitePrism::Page
     element :idade, '#user_age'
 
     element :btn_criar, :xpath, '//div[@class="actions btn waves-effect green"]'
+    element :btn_voltar, :xpath, '//a[@class="btn waves-light red"]'
 
     element :msg_erro_emailBlank, :xpath, '//div[@class="col s9"]//ul//li[1]'
     element :msg_erro_emailInvalid, :xpath, '//div[@class="col s9"]//ul//li[2]'
@@ -52,6 +53,10 @@ class FormularioPage < SitePrism::Page
 
     def verificarErroSobrenome
         find(msg_erro_sobrenomeBlank)
+    end
+
+    def clicarVoltar
+        btn_voltar.click
     end
     
 end

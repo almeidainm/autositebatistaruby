@@ -6,7 +6,7 @@ class AcessandoTreinamento < SitePrism::Page
   element :link_listar, :xpath, '//a[contains(text(),"Lista de Usuários")]'
 
 
-  #_________________________VERIFICAR_________________________________"
+  #_________________________CLIQUE_________________________________"
   
 
    def link_listar_clk

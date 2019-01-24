@@ -7,6 +7,7 @@ require 'site_prism'
 require 'capybara/cucumber'
 require_relative 'page_helper.rb'
 
+
 # Configurar web-driver do Capybara
 World(PageObjects)
 Capybara.configure do |config|

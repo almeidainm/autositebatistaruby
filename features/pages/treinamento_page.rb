@@ -21,37 +21,25 @@ class AcessandoTreinamento < SitePrism::Page
   end
 
   def verificaLinkForm
-    link_form.visible?
 
-    if link_form.visible? == false
-      
-         link_form.visible?
+    loop do
 
-            if  link_form.visible?
-
-           end
-      
+      tf = link_form.visible?
+      break if tf == true
     end
-    
-
-  end
-  def verificaLinkCriar
-
-    link_criar.visible?
-
-    if link_criar.visible? == false
-
-          link_criar.visible?
-
-             if  link_criar.visible?
-
-             end
-   end
-
-  end
+        
 end
+    def verificaLinkCriar
 
+      loop do
 
+        tf2 = link_criar.visible?
+        break if tf2 == true
+      end
+
+     end
+
+end
 
 
 

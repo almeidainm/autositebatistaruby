@@ -38,21 +38,21 @@ class FormularioPage < SitePrism::Page
     end
 
     def verificarErroEmailBlank
-        find(msg_erro_emailBlank)
+        msg_erro_emailBlank.visible?
     end
     
     def verificarErroEmailInvalid
-        find(msg_erro_emailInvalid)
+        msg_erro_emailInvalid.visible?
     end
 
     def verificarErroNome
         
-        find(msg_erro_nomeBlank)
+        msg_erro_nomeBlank.visible?
     
     end
 
     def verificarErroSobrenome
-        find(msg_erro_sobrenomeBlank)
+        msg_erro_sobrenomeBlank.visible?
     end
 
     def clicarVoltar

@@ -6,7 +6,9 @@ class AcessandoTreinamento < SitePrism::Page
 
   
   def searchField
-    has_search_field?
+
+    
+    search_field.visible?
 
   end
 
@@ -19,12 +21,34 @@ class AcessandoTreinamento < SitePrism::Page
   end
 
   def verificaLinkForm
-    has_link_form?
+    link_form.visible?
+
+    if link_form.visible? == false
+      
+         link_form.visible?
+
+            if  link_form.visible?
+
+           end
+      
+    end
+    
+
   end
   def verificaLinkCriar
-    has_link_criar?
-  end
 
+    link_criar.visible?
+
+    if link_criar.visible? == false
+
+          link_criar.visible?
+
+             if  link_criar.visible?
+
+             end
+   end
+
+  end
 end
 
 

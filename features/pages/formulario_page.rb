@@ -45,7 +45,9 @@ class FormularioPage < SitePrism::Page
     end
 
     def verificarErroNome
+        
         find(msg_erro_nomeBlank)
+    
     end
 
     def verificarErroSobrenome

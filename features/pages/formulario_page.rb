@@ -1,6 +1,5 @@
 class FormularioPage < SitePrism::Page
     
-
     element :nome,  '#user_name'
     element :sobrenome, '#user_lastname'
     element :email, '#user_email'

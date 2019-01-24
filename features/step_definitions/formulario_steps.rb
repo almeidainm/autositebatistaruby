@@ -20,7 +20,7 @@ end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
   home.verificaLinkCriar
-  home.link_criaruser_clk
+  
 end
 
 Quando("o usuario preenche o formulario com os dados {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |nome, sobrenome, email, endereco, universidade, profissao, genero, idade|

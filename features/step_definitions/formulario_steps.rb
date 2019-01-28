@@ -1,6 +1,5 @@
 Dado("que o usuario acesse a pagina da automação com batista") do
   index.load
-
 end
 
 Quando("clicar no botão começar automação web") do
@@ -8,7 +7,6 @@ Quando("clicar no botão começar automação web") do
 end
 
 Então("vai para pagina home") do
- 
   home.searchField
 end
 
@@ -58,5 +56,16 @@ end
 
 Então("é exibida a tela home") do
   home.searchField
+end
+
+Dado("que o usuario clique no botão Formulário") do
+  home.verificaLinkForm
+  home.link_formulario_clk
+end
+
+Dado("no botão Lista de Usuários do sub-menu que sera exibido") do
+  home.verificaLinkLista
+  home.link_lista_clk 
+  listarUsuarios.vetorLista
 end
 

@@ -58,4 +58,9 @@ Funcionalidade: Automatizar Site batista
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |
-        
+
+     @mapeando_lista_usuarios  
+    Cenario: Comparando usuarios cadastrados
+        Dado que o usuario clique no botão Formulário
+        E no botão Lista de Usuários do sub-menu que sera exibido
+        E verifica a existência dos dados de usuários "nome", "sobrenome", "email", "endereco", "universidade", "profissao", "genero" e "idade"

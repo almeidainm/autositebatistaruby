@@ -3,6 +3,7 @@ class AcessandoTreinamento < SitePrism::Page
   element :search_field, 'h5.orange-text'
   element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
   element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
+  element :link_lista, :xpath, '//a[contains(text(),"Lista de Usuários")]'
 
   
   def searchField
@@ -17,6 +18,18 @@ class AcessandoTreinamento < SitePrism::Page
   def link_criaruser_clk
    
     
+  end
+
+  def link_lista_clk
+    link_lista.click
+  end
+
+  def verificaLinkLista
+    loop do
+
+      tf = link_lista.visible?
+      break if tf == true
+    end
   end
 
   def verificaLinkForm

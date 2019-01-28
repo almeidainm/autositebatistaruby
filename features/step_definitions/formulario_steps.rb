@@ -18,6 +18,7 @@ end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
   home.verificaLinkCriar
+  home.link_criaruser_clk
   
 end
 

@@ -9,15 +9,7 @@ class CadastroSucessoPage < SitePrism::Page
     element :profissao, :xpath, '//strong[contains(text(),"Profissão:")]'
     element :genero, :xpath, '//strong[contains(text(),"Idade:")]'
     element :idade, :xpath, '//strong[contains(text(),"Profissão:")]'
-    @nome
-    @sobrenome
-    @email
-    @endereco
-    @universidade
-    @profissao
-    @genero
-    @idade
- 
+   
     def recebeForm(nome1, sobrenome1, email1, endereco1, universidade1, profissao1, genero1, idade1)
 
         @nome = nome1

@@ -22,8 +22,4 @@ module PageObjects
     @cadastropag ||= CadastroSucessoPage.new
 
   end
-
-  def listarUsuarios
-    @listaUsers ||= ListarUsers.new
-  end
 end

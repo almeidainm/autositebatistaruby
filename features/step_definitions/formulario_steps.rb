@@ -64,26 +64,21 @@ Então("é exibida a tela home") do
   home.link_formulario_clk
   
   home.link_listar_clk
+
   listar.btDeleteAll_clk
  
 end
 
-Dado("que o usuario clique no botão Formulário") do
-  
-  home.link_formulario_clk
+Quando("no botão Lista de Usuários do sub-menu que será exibido") do
+  home.link_listar_clk
 end
 
-Dado("no botão Lista de Usuários do sub-menu que sera exibido") do
- 
-  home.link_listar_clk 
-  
+Quando("exibir uma tabela com os dados respectivos a {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string} cadastrados anteriormente") do |string, string2, string3, string4, string5, string6, string7, string8|
+  listar.vetorLista()
 end
 
-Dado("verifica a existência dos dados de usuários {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |string, string2, string3, string4, string5, string6, string7, string8|
-  listarUsuarios.vetorLista()
-end
-
-Então("retorna para a página home") do
+Então("será clicado no botão VOLTAR para redirecionar á pagina home") do
   pending # Write code here that turns the phrase above into concrete actions
 end
+
 

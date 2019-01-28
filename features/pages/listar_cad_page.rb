@@ -1,6 +1,24 @@
 class ListarCad < SitePrism::Page
-   
+        elements :lista, 'tr > td'
         element :btDelete, :xpath, '//tbody//tr[1]//td[11]//a[1]'
+
+        
+     set_url '/users'
+
+ 
+  
+  def vetorLista()
+    puts "#{lista[0].text}"
+    puts "#{lista[1].text}"
+    puts "#{lista[2].text}"
+
+
+    var1 = lista[0].text
+    var2 = lista[1].text
+    var3 = lista[2].text
+
+    puts "#{var1}" 
+  end
 
     def btDeleteAll_clk
         cont = 0
@@ -24,6 +42,7 @@ class ListarCad < SitePrism::Page
             
         end
 
+   
 
     end
 

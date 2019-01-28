@@ -70,3 +70,7 @@ Funcionalidade: Automatizar Site batista
          E exibir uma tabela com os dados respectivos a "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>" cadastrados anteriormente
          Então será clicado no botão VOLTAR para redirecionar á pagina home
 
+      Exemplos: Valores
+
+      | nome    | sobrenome | email             | endereco  | universidade          | profissao | genero    | idade |
+      | Adriano | Lima      | adriano@gmail.com | rua teste | Universidade Paulista | Tester    | Masculino | 30    |

@@ -64,3 +64,4 @@ Funcionalidade: Automatizar Site batista
         Dado que o usuario clique no botão Formulário
         E no botão Lista de Usuários do sub-menu que sera exibido
         E verifica a existência dos dados de usuários "nome", "sobrenome", "email", "endereco", "universidade", "profissao", "genero" e "idade"
+        Entao retorna para pagina home

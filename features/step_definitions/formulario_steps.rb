@@ -42,7 +42,7 @@ Então("ele exibira a seguinte mensagem de erro {string}") do |mensagem|
     when 'name.blank' 
       formulario.verificarErroNome
     when 'sobrenome.blank'
-      formulario.verificarSusseso
+      formulario.verificarErroSobrenome
     when 'email.invalid'
       formulario.verificarErroEmailInvalid
     when 'email.blank'

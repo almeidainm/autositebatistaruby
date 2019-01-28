@@ -1,71 +1,84 @@
-class AcessandoTreinamento < SitePrism::Page
+class 
+    AcessandoTreinamento < SitePrism::Page
+
     #_________________________ELEMENTOS_______________________________"
-  element :search_field, 'h5.orange-text'
+
+  
+
   element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
   element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
   element :link_listar, :xpath, '//a[contains(text(),"Lista de Usuários")]'
 
 
-  #_________________________CLIQUE_________________________________"
-  
 
-   def link_listar_clk
-
+    def link_listar_clk
        link_listar.click
-
-   end 
+    end 
 
     def link_formulario_clk
-
-       link_form.click
-
-   end 
+        link_form.click
+    end 
 
     def link_criaruser_clk
-
-        link_criar.click
-
+         link_criar.click
     end
-#_________________________VERIFICAR___________________________________"
-
-    def searchField
 
     
-       search_field.visible?
+    def verificaPg
 
-    end
-    def verificaLinkForm
-          wait_until_link_form_visible
-          loop do
+        numP = 0
 
-           tf = link_form.visible?
+        while numP <= 0
+            tpg = assert_text(text, 'Bem vindo ao Site')
 
-          break if tf == true
-          end
+                if tpg == true
+                     numP =+1
+                end
+        end
         
     end
 
+    def verificaLinkForm
+        numF = 0
+
+        while numF <= 0
+            tf = link_form.visible?
+
+                if tf == true
+                     numF =+1
+                     link_form.click
+                end
+        end
+         
+    end
+
     def verificaLinkList 
-          wait_until_link_listar_visible
-          loop do
+        numL = 0
+
+        while numL <= 0
 
             tfl = link_listar.visible?
 
-          break if tfl == true
-          end
-      
-    end
-    def verificaLinkCriar
-      wait_until_link_criar_visible
-      loop do
-
-        tf2 = link_criar.visible?
-
-        break if tf2 == true
+                if tfl == true
+            
+                     numL =+1
+                     link_listar.click
+                end
         end
 
     end
- end
+    
+    def verificaLinkCriar
 
+        num = 0
 
+        while num <= 0
+            tfLc =  assert_text(text,"Criar Usuários" )
 
+                if tfLc == true
+                    num =+1
+                    link_criar.click
+                end
+        end
+    end
+end

@@ -4,7 +4,7 @@ class ListarCad < SitePrism::Page
 
     def btDeleteAll_clk
         cont = 0
-        num  = 5000
+        num  = 300
 
         while cont < num do
             
@@ -13,7 +13,7 @@ class ListarCad < SitePrism::Page
            
            
             if  page.has_selector?(:xpath, '//tbody//tr[1]//td[11]//a[1]') == false
-                cont =+ 5100
+                cont =+ 400
                 
             else
                 btDelete.click

@@ -13,13 +13,13 @@ module PageObjects
   def formulario
     @formpag ||= FormularioPage.new
   end
-<<<<<<< HEAD
+
   def listar
     @list ||= ListarCad.new
-=======
 
+  end
   def cadastroSucesso
     @cadastropag ||= CadastroSucessoPage.new
->>>>>>> ede36f3cc8e3b3be1253d258614a977b806b73de
+
   end
 end

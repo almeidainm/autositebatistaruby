@@ -8,19 +8,19 @@ Quando("clicar no botão começar automação web") do
 end
 
 Então("vai para pagina home") do
- 
-  home.searchField
+  
+  home.verificaPg
 end
 
 Quando("o usuario clicar no botão Formulário") do
   home.verificaLinkForm
-  home.link_formulario_clk
+ # home.link_formulario_clk
 
 end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
   home.verificaLinkCriar
-  home.link_criaruser_clk
+  
 end
 
 Quando("o usuario preenche o formulario com os dados {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |nome, sobrenome, email, endereco, universidade, profissao, genero, idade|
@@ -58,12 +58,13 @@ end
 
 Então("é exibida a tela home") do
   
-  home.searchField
-  home.verificaLinkForm
-  home.link_formulario_clk
-  home.verificaLinkList
-  home.link_listar_clk
-  listar.btDeleteAll_clk
+  home.verificaPg
+  #---------------------------
+  #home.verificaLinkForm
+  #home.link_formulario_clk
+  #home.verificaLinkList
+  #home.link_listar_clk
+  #listar.btDeleteAll_clk
  
 end
 

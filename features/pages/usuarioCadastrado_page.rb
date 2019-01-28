@@ -22,6 +22,7 @@ class CadastroSucessoPage < SitePrism::Page
         @idade =  idade1
         
     end
+    
     def compararForm
         nome.assert_text(text, @nome)
         sobrenome.assert_text(text, @sobrenome)
@@ -33,4 +34,5 @@ class CadastroSucessoPage < SitePrism::Page
         idade.assert_text(text, @idade)   
         
     end
+   
 end

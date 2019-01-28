@@ -75,7 +75,7 @@ end
 
 Dado("no botão Lista de Usuários do sub-menu que sera exibido") do
  
-  home.link_lista_clk 
+  home.link_listar_clk 
   
 end
 

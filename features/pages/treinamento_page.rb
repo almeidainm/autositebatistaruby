@@ -1,55 +1,71 @@
-class AcessandoTreinamento < SitePrism::Page
+class 
+    AcessandoTreinamento < SitePrism::Page
+
+    #_________________________ELEMENTOS_______________________________"
+
   
-  element :search_field, 'h5.orange-text'
+
   element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
   element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
   element :link_lista, :xpath, '//a[contains(text(),"Lista de Usuários")]'
 
-  
-  def searchField
-    search_field.visible?
 
-  end
+    #verifica pagina home aberta    
+    def verificaPg
 
-  def link_formulario_clk
-    link_form.click
-  end 
+        numP = 0
 
-  def link_criaruser_clk
-    link_criar.click
-  end
+        while numP <= 0
+            tpg = assert_text(text, 'Bem vindo ao Site')
 
-  def link_lista_clk
-    link_lista.click
-  end
-
-  def verificaLinkLista
-    loop do
-
-      tf = link_lista.visible?
-      break if tf == true
-    end
-  end
-
-  def verificaLinkForm
-
-    loop do
-
-      tf = link_form.visible?
-      break if tf == true
-    end
+                if tpg == true
+                     numP =+1
+                end
+        end
         
+    end
+
+    def link_formulario_clk
+        numF = 0
+
+        while numF <= 0
+            tf = link_form.visible?
+
+                if tf == true
+                     numF =+1
+                     link_form.click
+                end
+        end
+         
+    end
+
+    def link_listar_clk
+        numL = 0
+
+        while numL <= 0
+
+            tfl = link_listar.visible?
+
+                if tfl == true
+            
+                     numL =+1
+                     link_listar.click
+                end
+        end
+
+    end
+    
+    def link_criaruser_clk
+
+        num = 0
+
+        while num <= 0
+            tfLc =  assert_text(text,"Criar Usuários" )
+
+                if tfLc == true
+                    num =+1
+                    link_criar.click
+                end
+        end
+    end
 end
-    def verificaLinkCriar
-
-      loop do
-
-        tf2 = link_criar.visible?
-        break if tf2 == true
-      end
-     end
-
-end
-
-
-

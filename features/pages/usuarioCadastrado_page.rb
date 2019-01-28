@@ -34,4 +34,5 @@ class CadastroSucessoPage < SitePrism::Page
         idade.assert_text(text, @idade)   
         
     end
+   
 end

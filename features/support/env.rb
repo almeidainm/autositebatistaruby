@@ -1,10 +1,10 @@
 # Chamando as gems necessarias
-require 'capybara'
+require 'capybara/cucumber'
 require 'selenium-webdriver'
-require 'cucumber'
 require 'pry'
 require 'site_prism'
-require 'capybara/cucumber'
+
+
 require_relative 'page_helper.rb'
 
 

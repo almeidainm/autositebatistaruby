@@ -21,13 +21,13 @@ Funcionalidade: Automatizar Site batista
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   
-        |Adriano    |Lima           |adriano@gmail.com  |               |Universidade Paulista  |Tester         |Masculino      |30         |   
-        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |                       |Tester         |Masculino      |30         |   
-        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |               |Masculino      |30         |   
-        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   
-        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |               |30         |   
-        |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |           |   
-        |Adriano    |Lima           |adriano@gmail.com  |               |                       |               |               |           |   
+        |Bruno      |Lima           |bruno@gmail.com    |               |Universidade Paulista  |Tester         |Masculino      |30         |   
+        |Carlos     |Lima           |carlos@gmail.com   |rua teste      |                       |Tester         |Masculino      |30         |   
+        |Daniel     |Lima           |daniel@gmail.com   |rua teste      |Universidade Paulista  |               |Masculino      |30         |   
+        |Eva        |Lima           |eva@gmail.com      |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   
+        |Flavia     |Lima           |flavia@gmail.com   |rua teste      |Universidade Paulista  |Tester         |               |30         |   
+        |Gisele     |Lima           |gisele@gmail.com   |rua teste      |Universidade Paulista  |Tester         |Masculino      |           |   
+        |Helena     |Lima           |helena@gmail.com   |               |                       |               |               |           |   
     
     
     Esquema do Cenario: Caminhos alternativos
@@ -58,4 +58,9 @@ Funcionalidade: Automatizar Site batista
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |
-        
+
+     @mapeando_lista_usuarios  
+    Cenario: Comparando usuarios cadastrados
+        Dado que o usuario clique no botão Formulário
+        E no botão Lista de Usuários do sub-menu que sera exibido
+        E verifica a existência dos dados de usuários "nome", "sobrenome", "email", "endereco", "universidade", "profissao", "genero" e "idade"

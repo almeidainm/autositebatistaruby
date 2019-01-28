@@ -1,6 +1,5 @@
 Dado("que o usuario acesse a pagina da automação com batista") do
   index.load
-
 end
 
 Quando("clicar no botão começar automação web") do
@@ -13,13 +12,14 @@ Então("vai para pagina home") do
 end
 
 Quando("o usuario clicar no botão Formulário") do
-  home.verificaLinkForm
- # home.link_formulario_clk
+  
+  home.link_formulario_clk
 
 end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
-  home.verificaLinkCriar
+  
+  home.link_criaruser_clk
   
 end
 
@@ -66,5 +66,16 @@ Então("é exibida a tela home") do
   #home.link_listar_clk
   #listar.btDeleteAll_clk
  
+end
+
+Dado("que o usuario clique no botão Formulário") do
+  
+  home.link_formulario_clk
+end
+
+Dado("no botão Lista de Usuários do sub-menu que sera exibido") do
+ 
+  home.link_lista_clk 
+  listarUsuarios.vetorLista
 end
 

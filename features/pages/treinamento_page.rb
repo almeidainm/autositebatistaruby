@@ -7,23 +7,10 @@ class
 
   element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
   element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
-  element :link_listar, :xpath, '//a[contains(text(),"Lista de Usuários")]'
+  element :link_lista, :xpath, '//a[contains(text(),"Lista de Usuários")]'
 
 
-
-    def link_listar_clk
-       link_listar.click
-    end 
-
-    def link_formulario_clk
-        link_form.click
-    end 
-
-    def link_criaruser_clk
-         link_criar.click
-    end
-
-    
+    #verifica pagina home aberta    
     def verificaPg
 
         numP = 0
@@ -38,7 +25,7 @@ class
         
     end
 
-    def verificaLinkForm
+    def link_formulario_clk
         numF = 0
 
         while numF <= 0
@@ -52,7 +39,7 @@ class
          
     end
 
-    def verificaLinkList 
+    def link_listar_clk
         numL = 0
 
         while numL <= 0
@@ -68,7 +55,7 @@ class
 
     end
     
-    def verificaLinkCriar
+    def link_criaruser_clk
 
         num = 0
 

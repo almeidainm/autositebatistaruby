@@ -10,9 +10,10 @@ Funcionalidade: Automatizar Site batista
         Então vai para pagina home
 
     Esquema do Cenario: Caminho Feliz
+
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
-        E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
+        E o usuario preenche os dados respectivos a "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
         E clicar no botão criar
         Então é exibida a tela de usuario criado com sucesso com os dados corretos
 
@@ -30,14 +31,15 @@ Funcionalidade: Automatizar Site batista
         |Helena     |Lima           |helena@gmail.com   |               |                       |               |               |           |   
     
     
-    Esquema do Cenario: Caminhos alternativos
-        Quando o usuario clicar no botão Formulário
-        E no botão Criar Usuários do sub-menu que sera exibido
-        E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
-        E clicar no botão criar
-        Então ele exibira a seguinte mensagem de erro "<mensagem>"
+        Esquema do Cenario: Caminhos alternativos
 
-        Exemplos: Valores
+         Quando o usuario clicar no botão Formulário
+         E no botão Criar Usuários do sub-menu que sera exibido
+         E o usuario preenche os dados respectivos a "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
+         E clicar no botão criar
+         Então ele exibira a seguinte mensagem de erro "<mensagem>"
+
+            Exemplos: Valores
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |mensagem          |
         |           |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   name.blank     | 
@@ -45,23 +47,30 @@ Funcionalidade: Automatizar Site batista
         |Adriano    |Lima           |                   |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.blank    | 
         |Adriano    |Lima           |adriano@gmail      |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.invalid  | 
 
+        @voltar
+        Esquema do Cenario: Caminho do Botão Voltar
 
-    Esquema do Cenario: Caminho do Botão Voltar
-        Quando o usuario clicar no botão Formulário
-        E no botão Criar Usuários do sub-menu que sera exibido
-        E o usuario preenche o formulario com os dados "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
-        E clicar no botão voltar
-        Então é exibida a tela home
-        
+          Quando o usuario clicar no botão Formulário
+          E no botão Criar Usuários do sub-menu que sera exibido
+          E o usuario preenche os dados respectivos a "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>"
+          E clicar no botão voltar
+          Então é exibida a tela home
+ 
 
         Exemplos: Valores
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |
 
-     @mapeando_lista_usuarios  
-    Cenario: Comparando usuarios cadastrados
-        Dado que o usuario clique no botão Formulário
-        E no botão Lista de Usuários do sub-menu que sera exibido
-        E verifica a existência dos dados de usuários "nome", "sobrenome", "email", "endereco", "universidade", "profissao", "genero" e "idade"
-        Entao retorna para pagina home
+        @teste
+        Esquema do Cenario: Comparando usuarios cadastrados
+
+         Quando o usuario clicar no botão Formulário
+         E no botão Lista de Usuários do sub-menu que será exibido
+         E exibir uma tabela com os dados respectivos a "<nome>", "<sobrenome>", "<email>", "<endereco>", "<universidade>", "<profissao>", "<genero>" e "<idade>" cadastrados anteriormente
+         Então será clicado no botão VOLTAR para redirecionar á pagina home
+
+      Exemplos: Valores
+
+      | nome    | sobrenome | email             | endereco  | universidade          | profissao | genero    | idade |
+      | Adriano | Lima      | adriano@gmail.com | rua teste | Universidade Paulista | Tester    | Masculino | 30    |

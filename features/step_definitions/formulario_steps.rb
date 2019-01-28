@@ -60,11 +60,11 @@ Então("é exibida a tela home") do
   
   home.verificaPg
   #---------------------------
-  #home.verificaLinkForm
-  #home.link_formulario_clk
-  #home.verificaLinkList
-  #home.link_listar_clk
-  #listar.btDeleteAll_clk
+  
+  home.link_formulario_clk
+  
+  home.link_listar_clk
+  listar.btDeleteAll_clk
  
 end
 

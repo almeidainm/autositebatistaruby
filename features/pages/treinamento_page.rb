@@ -44,12 +44,12 @@ class
 
         while numL <= 0
 
-            tfl = link_listar.visible?
+            tfl = assert_text(text, 'Lista de Usuários')
 
                 if tfl == true
             
                      numL =+1
-                     link_listar.click
+                     link_lista.click
                 end
         end
 

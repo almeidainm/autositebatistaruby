@@ -67,11 +67,11 @@ end
 Dado("no botão Lista de Usuários do sub-menu que sera exibido") do
   home.verificaLinkLista
   home.link_lista_clk 
-  listarUsuarios.vetorLista
+  
 end
 
 Dado("verifica a existência dos dados de usuários {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |string, string2, string3, string4, string5, string6, string7, string8|
-  pending # Write code here that turns the phrase above into concrete actions
+  listarUsuarios.vetorLista()
 end
 
 Então("retorna para a página home") do

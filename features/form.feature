@@ -59,3 +59,4 @@ Funcionalidade: Automatizar Site batista
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |
         
+   

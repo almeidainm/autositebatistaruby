@@ -15,8 +15,7 @@ class AcessandoTreinamento < SitePrism::Page
   end 
 
   def link_criaruser_clk
-   
-    
+    link_criar.click
   end
 
   def verificaLinkForm
@@ -35,7 +34,6 @@ end
         tf2 = link_criar.visible?
         break if tf2 == true
       end
-      link_criar.click
      end
 
 end

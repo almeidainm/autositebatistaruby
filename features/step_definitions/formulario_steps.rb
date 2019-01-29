@@ -79,7 +79,7 @@ Quando("exibir uma tabela com os dados respectivos a {string}, {string}, {string
 end
 
 Então("será clicado no botão VOLTAR para redirecionar á pagina home") do
-  pending # Write code here that turns the phrase above into concrete actions
+  listar.btnVoltarHome
 end
 
 

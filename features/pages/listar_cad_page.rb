@@ -1,6 +1,7 @@
 class ListarCad < SitePrism::Page
     elements :lista, 'tr > td'
     element :btDelete, :xpath, '//tbody//tr[1]//td[11]//a[1]'
+    element :btn_voltar, :xpath, '//a[@class="btn red"]'
 
         
     set_url '/users'
@@ -13,11 +14,8 @@ class ListarCad < SitePrism::Page
             for l in 0..7
                 @coluna.push(listas.text)
             end
-            linha[i] = @coluna
-            i++
-        
+        end
     end
-
 
     def btDeleteAll_clk
         cont = 0
@@ -36,4 +34,9 @@ class ListarCad < SitePrism::Page
             
         end
     end
+
+    def btnVoltarHome
+        btn_voltar.click
+    end
+
 end

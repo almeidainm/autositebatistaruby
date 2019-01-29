@@ -15,15 +15,22 @@ Quando("o usuario clicar no botão Formulário") do
   
   home.link_formulario_clk
 
+  
+
+end
+Entao("será deletado todos usuarios cadastrados") do
+  listar.verificarAntes
 end
 
 Quando("no botão Criar Usuários do sub-menu que sera exibido") do
+ 
   
   home.link_criaruser_clk
   
 end
 
 Quando("o usuario preenche os dados respectivos a {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string}") do |nome, sobrenome, email, endereco, universidade, profissao, genero, idade|
+  
   formulario.preencherForm(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
   cadastroSucesso.recebeForm(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
 end
@@ -39,7 +46,7 @@ Então("é exibida a tela de usuario criado com sucesso com os dados corretos") 
 end
 
 Então("ele exibira a seguinte mensagem de erro {string}") do |mensagem|
-  case mensagem.to_i
+  case mensagem
     when 'name.blank' 
       formulario.verificarErroNome
     when 'sobrenome.blank'
@@ -57,16 +64,7 @@ Quando("clicar no botão voltar") do
 end
 
 Então("é exibida a tela home") do
-  
   home.verificaPg
-  #---------------------------
-  
-  home.link_formulario_clk
-  
-  home.link_listar_clk
-
-  listar.btDeleteAll_clk
- 
 end
 
 Quando("no botão Lista de Usuários do sub-menu que será exibido") do
@@ -75,10 +73,24 @@ end
 
 Quando("exibir uma tabela com os dados respectivos a {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string} cadastrados anteriormente") do |nome, sobrenome, email, endereco, universidade, profissao, genero, idade|
   listar.vetorLista(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
+  if($verifica == false)
+    
+    
+    return fail
+
+
+  end
+
+  
 end
 
 Então("será clicado no botão VOLTAR para redirecionar á pagina home") do
-  pending # Write code here that turns the phrase above into concrete actions
+  listar.btnVoltarHome
 end
 
+Então("serão deletados todos os dados e voltará para a home") do
+
+  listar.btDeleteAll_clk
+  listar.btnVoltarHome
+end
 

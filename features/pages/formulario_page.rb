@@ -13,9 +13,9 @@ class FormularioPage < SitePrism::Page
     element :btn_voltar, :xpath, '//a[@class="btn waves-light red"]'
 
     element :msg_erro_emailBlank, :xpath, '//div[@class="col s9"]//ul//li[1]'
-    element :msg_erro_emailInvalid, :xpath, '//div[@class="col s9"]//ul//li[2]'
+    element :msg_erro_emailInvalid, :xpath, '//li[contains(text(),"Email translation missing: pt-BR.activerecord.erro")]'
     element :msg_erro_nomeBlank, :xpath, '//li[contains(text(),"Name translation missing: pt-BR.activerecord.error")]'
-    element :msg_erro_sobrenomeBlank, :xpath, '//div[@class="col s9"]//ul//li[1]'
+    element :msg_erro_sobrenomeBlank, :xpath, '//li[contains(text(),"Sobrenome.blank")]'
     
     def preencherForm(nome1, sobrenome1, email1, endereco1, universidade1, profissao1, genero1, idade1)
         nome.set(nome1)

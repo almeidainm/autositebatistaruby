@@ -77,3 +77,17 @@ Então("serão deletados todos os dados e voltará para a home") do
   listar.btnVoltarHome
 end
 
+@arrastar
+Quando("o usuario clicar no botão Iterações") do
+  home.link_iteracao_clk 
+end
+
+Quando("no botão Drag And Drop do sub-menu que será exibido") do
+  home.link_arrastar_clk
+end
+
+Então("a carinha será arrastada para dentro do quadrado e voltará para a home") do
+  arrastar.arrastarWinston
+  arrastar.btnVoltarHome2
+end
+

@@ -75,10 +75,17 @@ Funcionalidade: Automatizar Site batista
       | nome    | sobrenome | email             | endereco  | universidade          | profissao | genero    | idade |
       | Adriano | Lima      | adriano@gmail.com | rua teste | Universidade Paulista | Tester    | Masculino | 30    |
        
-			 	@limpando_a_tabela
-    		Cenario: Limpando a lista de usuários cadastrados
+			@limpando_a_tabela
+    	Cenario: Limpando a lista de usuários cadastrados
 
       	Quando o usuario clicar no botão Formulário
       	E no botão Lista de Usuários do sub-menu que será exibido
-				Então serão deletados todos os dados e voltará para a home
+		Então serão deletados todos os dados e voltará para a home
+
+        Cenario: Arrastando elementos 
+
+        Quando o usuario clicar no botão Iterações
+        E no botão Drag And Drop do sub-menu que será exibido
+        Então a carinha será arrastada para dentro do quadrado e voltará para a home
+
        

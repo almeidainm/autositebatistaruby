@@ -20,6 +20,10 @@ module PageObjects
   
   def cadastroSucesso
     @cadastropag ||= CadastroSucessoPage.new
-
   end
+
+  def arrastar
+    @arrastarelemento ||= DragAndDrop.new
+  end
+  
 end

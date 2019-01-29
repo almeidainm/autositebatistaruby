@@ -8,6 +8,8 @@ class
   element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
   element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
   element :link_lista, :xpath, '//a[contains(text(),"Lista de Usuários")]'
+  element :link_iteracao, :xpath, '//a[contains(text(),"Iterações")]'
+  element :link_arrastar, :xpath, '//a[contains(text(),"Drag And Drop")]'
 
 
     #verifica pagina home aberta    
@@ -67,5 +69,15 @@ class
                     link_criar.click
                 end
         end
+    end
+
+    def link_iteracao_clk
+        assert_text(text, "Iterações")
+        link_iteracao.click
+    end
+
+    def link_arrastar_clk
+        assert_text(text, "Drag And Drop")
+        link_arrastar.click
     end
 end

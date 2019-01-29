@@ -60,13 +60,14 @@ Então("é exibida a tela home") do
   
   home.verificaPg
   #---------------------------
+  # COMANDOS DO DELETE ---
   
-  home.link_formulario_clk
+  #home.link_formulario_clk
   
-  home.link_listar_clk
+  #home.link_listar_clk
 
-  listar.btDeleteAll_clk
- 
+  #listar.btDeleteAll_clk
+ #-----------------------------
 end
 
 Quando("no botão Lista de Usuários do sub-menu que será exibido") do

@@ -5,17 +5,26 @@ class ListarCad < SitePrism::Page
         
     set_url '/users'
 
-    def vetorLista
-        linha = Array.new
-        @coluna = Array.new
-        i=0
-        lista.each do |listas|
-            for l in 0..7
-                @coluna.push(listas.text)
-            end
-            linha[i] = @coluna
-            i++
+    def vetorLista(nome, sobrenome, email, endereco, universidade, profissao, genero, idade)
+        binding.pry
+        linha = "#{nome} #{nome} #{nome} #{nome} #{nome} #{nome} #{nome} #{nome} #{nome}"
+
+        if nome == "carlos"
+            @c=3
+            @x=4
+        end
         
+        
+           
+            for @c in @x do
+
+                
+                if()
+                    true
+                end
+            end
+            
+
     end
 
 

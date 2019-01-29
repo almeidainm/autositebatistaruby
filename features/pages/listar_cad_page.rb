@@ -2,6 +2,7 @@ class ListarCad < SitePrism::Page
     elements :linhas, 'tbody > tr'
     elements :colunas, 'tr > td'
     element :btDelete, :xpath, '//tbody//tr[1]//td[11]//a[1]'
+    element :btn_voltar, :xpath, '//a[@class="btn red"]'
 
         
     set_url '/users'
@@ -281,10 +282,12 @@ class ListarCad < SitePrism::Page
         texto = "#{linhas[@c.to_i].text}"
       
         if texto == @valor_texto
-           true
-            
+            $verifica = true
+           
         else
-            false
+
+          $verifica = false
+            
         end
 
     end
@@ -319,9 +322,8 @@ class ListarCad < SitePrism::Page
 
     end
 
-
-
-
-
+    def btnVoltarHome
+        btn_voltar.click
+    end
 
 end

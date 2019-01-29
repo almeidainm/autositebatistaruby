@@ -82,3 +82,9 @@ Funcionalidade: Automatizar Site batista
         |Gisele     |Lima           |gisele@gmail.com   |rua teste      |Universidade Paulista  |Tester         |Masculino      |           |   
         |Helena     |Lima           |helena@gmail.com   |               |                       |               |               |           |   
     
+    @limpando_a_tabela
+    Cenario: Limpando a lista de usuários cadastrados
+
+      	Quando o usuario clicar no botão Formulário
+      	E no botão Lista de Usuários do sub-menu que será exibido
+		Então serão deletados todos os dados e voltará para a home

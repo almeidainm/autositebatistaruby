@@ -16,8 +16,8 @@ module PageObjects
 
   def listar
     @list ||= ListarCad.new
-
   end
+  
   def cadastroSucesso
     @cadastropag ||= CadastroSucessoPage.new
 

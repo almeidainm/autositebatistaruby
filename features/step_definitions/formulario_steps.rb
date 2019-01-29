@@ -57,17 +57,7 @@ Quando("clicar no botão voltar") do
 end
 
 Então("é exibida a tela home") do
-  
   home.verificaPg
-  #---------------------------
-  # COMANDOS DO DELETE ---
-  
-  #home.link_formulario_clk
-  
-  #home.link_listar_clk
-
-  #listar.btDeleteAll_clk
- #-----------------------------
 end
 
 Quando("no botão Lista de Usuários do sub-menu que será exibido") do
@@ -82,4 +72,8 @@ Então("será clicado no botão VOLTAR para redirecionar á pagina home") do
   listar.btnVoltarHome
 end
 
+Então("serão deletados todos os dados e voltará para a home") do
+  #listar.btDeleteAll_clk
+  listar.btnVoltarHome
+end
 

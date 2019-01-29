@@ -49,3 +49,5 @@
 [0128/121003.477:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso nï¿½o lhe foi concedido. (0xc0000022)
 [0128/121003.517:ERROR:exception_snapshot_win.cc(88)] thread ID 7892 not found in process
 >>>>>>> 025e5ee4cfd7960ad351fc5d6c47617643976920
+[0129/105340.400:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
+[0129/105340.400:ERROR:exception_snapshot_win.cc(88)] thread ID 9992 not found in process

@@ -43,7 +43,7 @@ Então("ele exibira a seguinte mensagem de erro {string}") do |mensagem|
     when 'name.blank' 
       formulario.verificarErroNome
     when 'sobrenome.blank'
-      formulario.verificarSusseso
+      formulario.verificarErroSobrenome
     when 'email.invalid'
       formulario.verificarErroEmailInvalid
     when 'email.blank'
@@ -75,7 +75,7 @@ Quando("no botão Lista de Usuários do sub-menu que será exibido") do
 end
 
 Quando("exibir uma tabela com os dados respectivos a {string}, {string}, {string}, {string}, {string}, {string}, {string} e {string} cadastrados anteriormente") do |string, string2, string3, string4, string5, string6, string7, string8|
-  listar.vetorLista()
+  listar.vetorLista
 end
 
 Então("será clicado no botão VOLTAR para redirecionar á pagina home") do

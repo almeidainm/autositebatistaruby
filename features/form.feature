@@ -9,7 +9,7 @@ Funcionalidade: Automatizar Site batista
         Quando clicar no botão começar automação web
         Então vai para pagina home
 
-      Esquema do Cenario: Caminho Feliz
+    Esquema do Cenario: Caminho Feliz
 
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
@@ -62,7 +62,7 @@ Funcionalidade: Automatizar Site batista
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |
 
-     
+        @teste
         Esquema do Cenario: Comparando usuarios cadastrados
 
          Quando o usuario clicar no botão Formulário

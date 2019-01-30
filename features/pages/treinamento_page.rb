@@ -1,18 +1,20 @@
 class 
     AcessandoTreinamento < SitePrism::Page
 
-    #_________________________ELEMENTOS_______________________________"
-
+    #________________Mapeamento dos elementos da página________________# 
   
 
-  element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
-  element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
-  element :link_lista, :xpath, '//a[contains(text(),"Lista de Usuários")]'
-  element :link_iteracao, :xpath, '//a[contains(text(),"Iterações")]'
-  element :link_arrastar, :xpath, '//a[contains(text(),"Drag And Drop")]'
+    element :link_form, :xpath, '//a[contains(text(),"Formulário")]'
+    element :link_criar, :xpath, '//a[contains(text(),"Criar Usuários")]'
+    element :link_lista, :xpath, '//a[contains(text(),"Lista de Usuários")]'
+    element :link_iteracao, :xpath, '//a[contains(text(),"Iterações")]'
+    element :link_arrastar, :xpath, '//a[contains(text(),"Drag And Drop")]'
+
+    #_____________________________MÉTODOS_______________________________#
 
 
-    #verifica pagina home aberta    
+    #Verifica se a pagina home está aberta.
+    #While utilizado para caso a página não carregue completamente.
     def verificaPg
 
         numP = 0
@@ -26,7 +28,8 @@ class
         end
         
     end
-
+    #Clique do LINK Formulário.
+    #While utilizado para caso a página não carregue completamente.
     def link_formulario_clk
         numF = 0
 
@@ -40,7 +43,8 @@ class
         end
          
     end
-
+    #Clique do LINK Lista de Usuários.
+    #While utilizado para caso a página não carregue completamente.
     def link_listar_clk
         numL = 0
 
@@ -56,7 +60,8 @@ class
         end
 
     end
-    
+    #Clique do LINK Criar Usuário.
+    #While utilizado para caso a página não carregue completamente.
     def link_criaruser_clk
 
         num = 0
@@ -70,12 +75,13 @@ class
                 end
         end
     end
-
-    def link_iteracao_clk
+   #Clique do LINK Interações.
+   def link_iteracao_clk
         assert_text(text, "Iterações")
         link_iteracao.click
     end
 
+    #Clique no LINK Drag and Drop.
     def link_arrastar_clk
         assert_text(text, "Drag And Drop")
         link_arrastar.click

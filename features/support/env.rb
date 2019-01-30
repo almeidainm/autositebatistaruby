@@ -3,6 +3,7 @@ require 'selenium-webdriver'
 require 'pry'
 require 'site_prism'
 require_relative 'page_helper.rb'
+require_relative 'helper.rb'
 
 
 

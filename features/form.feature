@@ -1,22 +1,28 @@
 #language: pt
 
-Funcionalidade: Automatizar Site batista
+Funcionalidade: Testar as funções Criar Usuários, Listar usuários e Iterações
 
    
 
-    Contexto: Acessar tela principal
+    Contexto: Acessar tela principal.
+
         Dado que o usuario acesse a pagina da automação com batista
         Quando clicar no botão começar automação web
         Então vai para pagina home
-    @ok
 
-    @Deletar
-    Cenario: Deletar usuarios cadastrados
-             Quando o usuario clicar no botão Formulário
-             E no botão Lista de Usuários do sub-menu que será exibido
-             Entao será deletado todos usuarios cadastrados
+    #______________________________________________________________________________________________________________________________________________________________#
+
+    @Verificar
+    Cenario: Deletar usuarios cadastrados.
+
+        Quando o usuario clicar no botão Formulário
+        E no botão Lista de Usuários do sub-menu que será exibido
+        Entao será deletado todos usuarios cadastrados
+
+    #______________________________________________________________________________________________________________________________________________________________#
     
-    Esquema do Cenario: Caminho Feliz
+    @feliz
+    Esquema do Cenario: Caminho feliz.
 
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
@@ -25,7 +31,7 @@ Funcionalidade: Automatizar Site batista
         Então é exibida a tela de usuario criado com sucesso com os dados corretos
 
 
-        Exemplos: Valores
+        Exemplos:
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   
@@ -36,9 +42,10 @@ Funcionalidade: Automatizar Site batista
         |Flavia     |Lima           |flavia@gmail.com   |rua teste      |Universidade Paulista  |Tester         |               |30         |   
         |Gisele     |Lima           |gisele@gmail.com   |rua teste      |Universidade Paulista  |Tester         |Masculino      |           |   
         |Helena     |Lima           |helena@gmail.com   |               |                       |               |               |           |   
-    
+    #__________________________________________________________________________________________________________________________________________________________#
+   
     @alternativo
-    Esquema do Cenario: Caminhos alternativos
+    Esquema do Cenario: Caminhos alternativos.
 
         Quando o usuario clicar no botão Formulário
         E no botão Criar Usuários do sub-menu que sera exibido
@@ -46,7 +53,7 @@ Funcionalidade: Automatizar Site batista
         E clicar no botão criar
         Então ele exibira a seguinte mensagem de erro "<mensagem>"
 
-        Exemplos: Valores
+        Exemplos:
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |mensagem          |
         |           |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   name.blank     | 
@@ -54,7 +61,9 @@ Funcionalidade: Automatizar Site batista
         |Adriano    |Lima           |                   |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.blank    | 
         |Adriano    |Lima           |adriano@gmail      |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |   email.invalid  | 
 
-    @delete
+    #__________________________________________________________________________________________________________________________________________________________#
+   
+    @voltar
     Esquema do Cenario: Caminho do Botão Voltar
 
         Quando o usuario clicar no botão Formulário
@@ -64,12 +73,13 @@ Funcionalidade: Automatizar Site batista
         Então é exibida a tela home
  
 
-        Exemplos: Valores
+        Exemplos:
 
         |nome       |sobrenome      |email              |endereco       |universidade           |profissao      |genero         |idade      |
         |Adriano    |Lima           |adriano@gmail.com  |rua teste      |Universidade Paulista  |Tester         |Masculino      |30         |
-
-    @compara
+    #__________________________________________________________________________________________________________________________________________________________#
+    
+    @comparar
     Esquema do Cenario: Comparando usuarios cadastrados
 
          Quando o usuario clicar no botão Formulário
@@ -79,13 +89,6 @@ Funcionalidade: Automatizar Site batista
 
         Exemplos: Valores
 
-<<<<<<< HEAD
-      | nome    | sobrenome | email             | endereco  | universidade          | profissao | genero    | idade |
-      | Adriano | Lima      | adriano@gmail.com | rua teste | Universidade Paulista | Tester    | Masculino | 30    |
-       
-			@limpando_a_tabela
-    	Cenario: Limpando a lista de usuários cadastrados
-=======
         | nome      | sobrenome     |email              | endereco      | universidade          | profissao     | genero        | idade     |
         | Adriano   | Lima          | adriano@gmail.com | rua teste     | Universidade Paulista | Tester        | Masculino     | 30        |
         |Bruno      |Lima           |bruno@gmail.com    |               |Universidade Paulista  |Tester         |Masculino      |30         |   
@@ -95,22 +98,20 @@ Funcionalidade: Automatizar Site batista
         |Flavia     |Lima           |flavia@gmail.com   |rua teste      |Universidade Paulista  |Tester         |               |30         |   
         |Gisele     |Lima           |gisele@gmail.com   |rua teste      |Universidade Paulista  |Tester         |Masculino      |           |   
         |Helena     |Lima           |helena@gmail.com   |               |                       |               |               |           |   
-    
-    @limpando_a_tabela
-    Cenario: Limpando a lista de usuários cadastrados
->>>>>>> 4075dd94905b2a890d17c4270269ad893be76827
+    #__________________________________________________________________________________________________________________________________________________________#
+    @Limpar
+     Cenario: Limpando a lista de usuários cadastrados
 
       	Quando o usuario clicar no botão Formulário
       	E no botão Lista de Usuários do sub-menu que será exibido
 		Então serão deletados todos os dados e voltará para a home
-<<<<<<< HEAD
-
-        Cenario: Arrastando elementos 
+    #__________________________________________________________________________________________________________________________________________________________#
+    @drag
+    Cenario: Arrastando elementos 
 
         Quando o usuario clicar no botão Iterações
         E no botão Drag And Drop do sub-menu que será exibido
         Então a carinha será arrastada para dentro do quadrado e voltará para a home
+    #__________________________________________________________________________________________________________________________________________________________#
 
        
-=======
->>>>>>> 4075dd94905b2a890d17c4270269ad893be76827

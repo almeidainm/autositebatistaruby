@@ -79,13 +79,6 @@ Funcionalidade: Automatizar Site batista
 
         Exemplos: Valores
 
-<<<<<<< HEAD
-      | nome    | sobrenome | email             | endereco  | universidade          | profissao | genero    | idade |
-      | Adriano | Lima      | adriano@gmail.com | rua teste | Universidade Paulista | Tester    | Masculino | 30    |
-       
-			@limpando_a_tabela
-    	Cenario: Limpando a lista de usuários cadastrados
-=======
         | nome      | sobrenome     |email              | endereco      | universidade          | profissao     | genero        | idade     |
         | Adriano   | Lima          | adriano@gmail.com | rua teste     | Universidade Paulista | Tester        | Masculino     | 30        |
         |Bruno      |Lima           |bruno@gmail.com    |               |Universidade Paulista  |Tester         |Masculino      |30         |   
@@ -98,12 +91,10 @@ Funcionalidade: Automatizar Site batista
     
     @limpando_a_tabela
     Cenario: Limpando a lista de usuários cadastrados
->>>>>>> 4075dd94905b2a890d17c4270269ad893be76827
 
       	Quando o usuario clicar no botão Formulário
       	E no botão Lista de Usuários do sub-menu que será exibido
 		Então serão deletados todos os dados e voltará para a home
-<<<<<<< HEAD
 
         Cenario: Arrastando elementos 
 
@@ -112,5 +103,3 @@ Funcionalidade: Automatizar Site batista
         Então a carinha será arrastada para dentro do quadrado e voltará para a home
 
        
-=======
->>>>>>> 4075dd94905b2a890d17c4270269ad893be76827

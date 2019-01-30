@@ -25,5 +25,5 @@ module PageObjects
   def arrastar
     @arrastarelemento ||= DragAndDrop.new
   end
-  
+
 end

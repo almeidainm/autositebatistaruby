@@ -1,0 +1,6 @@
+# YAML Templatess
+
+default: -p pretty -p html -p firefox
+pretty: --format pretty
+html: --format html --out=log/features.html 
+firefox: BROWSERS=chrome
